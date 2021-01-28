@@ -1,0 +1,1223 @@
+int a=5;
+int b=2;
+
+float ans;
+ans=a/b;
+
+ans => 2.0
+
+control statements
+
+if
+if else
+nested if
+else if ladder
+
+for
+while
+do while
+
+switch case
+
+looping statements:
+initialization
+condition
+iteration
+
+based on marks get the grade
+>75 distinction
+bet 60 to 74 first class
+
+bet 50 to 59 pass
+
+less than 50 fail
+
+using looping
+for print from 1 to 10
+do while print from 30 to 20
+while print from 1 to 10(only even numbers)
+
+
+https://chat.whatsapp.com/Ha4sXOjS762EY0KvNWatuy
+
+
+
+
+
+
+
+
+[4:24 PM] Ayushi Sharma (Guest)
+    
+public class Employee {​​​​​​​
+
+
+    private int EmpID;
+    private String EmpName;
+    private String[] EmpTechnologies;
+    public int getEmpID() {​​​​​​​
+        return EmpID;
+    }​​​​​​​
+    public void setEmpID(int empID) {​​​​​​​
+        EmpID = empID;
+    }​​​​​​​
+    public String getEmpName() {​​​​​​​
+        return EmpName;
+    }​​​​​​​
+    public void setEmpName(String empName) {​​​​​​​
+        EmpName = empName;
+    }​​​​​​​
+    public String[] getEmpTechnologies() {​​​​​​​
+        return EmpTechnologies;
+    }​​​​​​​
+    public void setEmpTechnologies(String[] empTechnologies) {​​​​​​​
+        EmpTechnologies = empTechnologies;
+    }​​​​​​​
+    
+}​​​​​​​
+ 
+
+
+
+[4:24 PM] Ayushi Sharma (Guest)
+    
+public static void main(String[] args) {​​​​​​​
+        Scanner sc= new Scanner(System.in);
+        int n;
+        System.out.println("Enter number of employes:");
+        n = sc.nextInt();
+        Employee[] empData= new Employee[n];
+        for(int i=0;i<n;i++)
+        {​​​​​​​    
+            empData[i]=new Employee();
+            System.out.println("Enter employee Number:" );
+            empData[i].setEmpID(sc.nextInt());
+            System.out.println("Enter employee Name:" );
+            empData[i].setEmpName(sc.next());
+            System.out.println("How many technologies do employee work on:");
+            int num=sc.nextInt();
+            String[] technology=new String[num];
+            System.out.println("Enter names of technology(s) known:");
+            for(int j=0;j<num;j++)
+            {​​​​​​​
+                technology[j]=sc.next();
+            }​​​​​​​
+            empData[i].setEmpTechnologies(technology);    
+        }​​​​​​​
+        System.out.println("Entered Details of Employee Are:");
+        for(int i=0;i<n;i++)
+        {​​​​​​​
+            System.out.println("Employee Number: "+empData[i].getEmpID() );
+            System.out.println("Employee Name: "+empData[i].getEmpName());
+            System.out.print("Employee Technologies: ");
+            for(String tech:empData[i].getEmpTechnologies()) 
+            {​​​​​​​
+                System.out.print(tech+" ");
+            }​​​​​​​
+        }​​​​​​​
+
+
+    }​​​​​​​
+
+
+}​​​​​​​
+
+
+
+
+[10:28 AM] Degaonkar, Sanjay - 5/01/21
+    
+Action items:
+
+1) install git
+2) install mysql
+3) prime number
+fact
+fibo
+4) use predefined static methods
+e.g. Math.random(); (generates any no between 0.0 to 1.0)
+
+
+5) Project Assignment
+
+1) "Validation" for roll number
+in case duplicate roll number is entered:show the message
+duplicate roll no is not allowed, pls enter unique roll number
+
+ 2) Reports
+show student details by roll number
+
+ 3)package
+com.capgemini.beans/model
+com.capgemini.service
+com.capgemini.view
+
+4) add following field in Student class
+private String[] courses;
+how many courses do you want to register
+3
+enter 3 course names
+
+5) proper naming convention for all(class, datamembers, methods..)
+
+6) I) for Java courses how many students are registered
+II) show student details course wise
+
+
+[10:41 AM] Degaonkar, Sanjay
+    
+1. add student
+2. show all students
+3. show student details by roll number
+4. show student details by course name
+5. show count by course name
+6. exit
+
+
+ while(true)
+
+
+
+
+git init
+
+
+git pull https://github.com/sanjaydegaonkar/Fullstackbatch_Jan_2021.git
+
+git add *
+
+git commit -m "some message"
+
+git push https://github.com/sanjaydegaonkar/Fullstackbatch_Jan_2021.git master
+
+github userid
+github pwd
+
+6/01/2021
+
+Method overriding:
+---------------------
+same method and same signature
+can use @Override annotation in child class method
+as fas as the primitive type is concern it must be same or covariant
+covariant - if the superclass method is returning superclass object then subclass method may return either superclass object or subclass object(1.5)
+method overriding is not possible with final, static, private
+access modifier - while overriding requires same modifer or broader modifer
+
+
+methods are belonging to object
+data members are belonging to ref
+
+class Parent
+{
+int a=100;
+void show()
+{
+S.o.p("show from parent");
+}
+}
+
+class Child extends Parent
+{
+int a=200;
+void show()
+{
+S.o.p("show from child");
+}
+}
+
+Parent p = new Child();
+
+p - reference
+
+new Child() - object
+
+data member - Parent
+method - Child
+
+p.a => 100
+p.show() => show from child
+
+---------------------------------------------
+
+import java.util.Scanner;
+
+public class MultipleJobs {
+
+void square(int a)
+{
+System.out.println("Square = "+(a*a));
+}
+void addition(int a,int b)
+{
+int c=a+b;
+System.out.println("Addition = "+c);
+}
+
+ public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter two numbers for addition");
+int num1 = sc.nextInt();
+int num2=sc.nextInt();
+MultipleJobs m=new MultipleJobs();
+m.addition(num1, num2);
+System.out.println("Enter number to get square");
+int num3=sc.nextInt();
+m.square(num3);
+
+
+ }
+
+}
+
+-------------------------
+
+public class VarArgsDemo {
+static void show(String...args)
+{
+for(int i=0;i<args.length;i++)
+{
+System.out.println(args[i]);
+}
+for(String s:args) //no need do initilization, condition, iteration
+{
+System.out.println(s);
+}
+
+}
+
+ public static void main(String[] args) {
+show("one","two","three");
+
+ }
+
+}
+
+
+
+
+[11:20 AM] Degaonkar, Sanjay
+    
+interface Bank
+{​​​​​
+void createAccount(); public and abstract
+void depositAmount();
+int a=100; // public static and final(constant)
+}​​​​​
+
+class ICICIBank implements Bank
+{​​​​​
+void createAccount()
+{​​​​​
+method body...
+}​​​​​
+
+void despositAmount()
+{​​​​​
+method body...
+}​​​​​
+}​​​​​
+Bank bank=new ICICIBank();
+1) contract between two parties
+Employee contract with Capgemini
+tenent - contract with Owner
+possible to implement multiple contracts
+ abstract interface
+related classes unrelated classes
+e.g e.g. you have contract with Capgemini, contract with Owner
+Employee
+Developer Tester
+
+final -
+final int a=100 //constant
+
+final void show() // final method can not be overridden
+
+final class A{​​​​​}​​​​​ // A class can't be inherited
+ class B extends A - invalid
+
+
+
+
+[11:25 AM] Degaonkar, Sanjay
+    
+a class can extends another class
+
+a class can extends multiple classes
+
+a class can extends another interface
+a class can implements another interface
+a class can implements multiple interfaces
+
+interface can extends another class
+interface can extends another interface
+interface can extends multiple interfaces
+​[11:25 AM] Unknown User
+      harshita shukla (Guest) left the conversation.
+    ​[11:25 AM] Degaonkar, Sanjay
+    
+Identify true or false
+
+
+
+[12:27 PM] Degaonkar, Sanjay
+    
+a class can extends another class - T
+
+a class can extends multiple classes - F
+
+a class can extends another interface - F
+a class can implements another interface - T
+a class can implements multiple interfaces - T
+
+interface can extends another class - F
+interface can extends another interface - T
+interface can extends multiple interfaces - T
+
+
+one example using try catch ---------NullPointerException, any other
+
+ can we write nested try block
+can we write try catch inside catch block
+
+[11:02 AM] Degaonkar, Sanjay
+    
+1. Create exception class
+public class InvalidAccountNumberException extends Exception{​​​​​
+
+}​​​​​
+
+
+2. Create class for throwing an exception
+public class ICICIBank {
+
+public int withdrawAmount(int accountNumber,int amount)throws InvalidAccountNumberException
+{
+if(accountNumber<100 || accountNumber>500)
+{
+throw new InvalidAccountNumberException();
+}
+else
+{
+System.out.println("successful operation");
+return 2000;
+}
+}
+
+}
+
+
+3. Handle the exception in main block
+public class MainApp {​​​​​
+
+ public static void main(String[] args) {​​​​​
+ICICIBank bank=new ICICIBank();
+try
+{​​​​​
+System.out.println("Balance = "+bank.withdrawAmount(1100, 3000));
+}​​​​​catch(InvalidAccountNumberException ia)
+{​​​​​
+System.out.println("Invalid account number");
+}​​​​​
+ }​​​​​
+}​​​​​
+
+
+
+Aishwarya Shetty - 1
+Ranjan - 2
+Isha - 3
+Kanchan - 4
+harshita - 5
+Uma - 6 
+Shagalya - 7
+Roofy - 8
+Aisiri - 9 
+Kajal Singh - 10
+Sreejith - 11
+Yogita - 12
+Deepika - 13
+Laxmi Narayan - 15
+
+
+
+
+14
+
+
+Dates, Numbers, and Currency - Aastha Agarwal
+
+Parsing, Tokenizing, and Formatting - Mansi
+
+Locating Data via Pattern Matching
+Tokenizing  & The java.io.Console Class - Ayushi
+
+Enums and coupling - Manoj
+
+
+                1. Parsing
+
+                      String = "10";
+ 
+                (Internally)
+                 
+                       Unicode characters '1' and '0' 
+
+                
+                      ParseInt - to give the real number (10).
+
+                            converting string to boolean.
+                            converting string to byte.
+                            converting string to short.
+                            converting string to int.
+                            converting string to long.
+                            converting string to float.
+                            converting string to double.
+                            converting string to char 
+
+                     Note: We cannot do casting with String.
+ 
+
+           2. Tokenizing
+            
+           java.util.StringTokenizer
+
+           break string into tokens
+
+           nextToken();
+           - returns the token from StringTokenizer object
+
+
+
+
+      
+
+            3. Formatting
+
+
+
+                %s  - (data type) any data type - (output) string value 
+                %f  - (data type) float         - (output) decimal number
+                %d  - (data type) int           - (output) interger value
+
+Coupling
+
+https://www.geeksforgeeks.org/coupling-in-java/
+https://www.javatpoint.com/q/3147/what-is-the-meaning-of-tightly-and-loosely-coupling?
+https://www.javatpoint.com/q/5313/what-is-the-meaning-of-loose-coupling-in-java-interface-?
+
+
+Enum
+
+https://www.w3schools.com/java/java_enums.asp
+https://www.geeksforgeeks.org/enum-in-java/
+https://youtu.be/JHs-f2p-yYw
+ 
+46052187
+          
+
+
+[12:27 PM] Degaonkar, Sanjay
+    
+package com.capgemini;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.ListIterator;
+public class LinkedListDemo {​​​​​
+ public static void main(String[] args) {​​​​​
+LinkedList<Integer> obj=new LinkedList<>(); //generic - type safety
+obj.add(4); //autoboxing
+obj.add(4);
+obj.add(14);
+System.out.println(obj); //toString
+System.out.println("Using enhanced for loop");
+for(Integer i:obj)
+{​​​​​
+System.out.println(i);
+}​​​​​
+System.out.println("Using index position");
+for(int i=0;i<obj.size();i++)
+{​​​​​
+System.out.println(obj.get(i));
+}​​​​​
+System.out.println("Using Iterator");
+Iterator it = obj.iterator();
+while(it.hasNext())
+{​​​​​
+System.out.println(it.next());
+}​​​​​
+System.out.println("Using ListIterator");
+ListIterator listit = obj.listIterator();
+while(listit.hasNext())
+{​​​​​
+System.out.println(listit.next());
+}​​​​​
+}​​​​​
+}​​​​​
+
+Assignment
+
+Set - it accepts only unique objects
+
+ HashSet - unordered
+LinkHashSet - ordered
+TreeSet - ordered
+
+Array vs Collection
+
+
+
+
+
+
+[3:15 PM] Degaonkar, Sanjay
+    
+public class Employee implements Comparable<Employee>{​​​​​
+
+private String empNumber;
+private String name;
+public Employee(String empNumber, String name) {​​​​​
+super();
+this.empNumber = empNumber;
+this.name = name;
+}​​​​​
+public String getEmpNumber() {​​​​​
+return empNumber;
+}​​​​​
+public void setEmpNumber(String empNumber) {​​​​​
+this.empNumber = empNumber;
+}​​​​​
+public String getName() {​​​​​
+return name;
+}​​​​​
+public void setName(String name) {​​​​​
+this.name = name;
+}​​​​​
+@Override
+public int compareTo(Employee o) {​​​​​
+// TODO Auto-generated method stub
+return empNumber.compareTo(o.getEmpNumber());
+}​​​​​
+@Override
+public String toString() {​​​​​
+return "Employee [empNumber=" + empNumber + ", name=" + name + "]";
+}​​​​​
+
+public int hashCode()
+{​​​​​
+System.out.println("from hashcode "+name.hashCode());
+return name.hashCode();
+}​​​​​
+public boolean equals(Object obj)
+{​​​​​
+System.out.println("From equals");
+Employee emp = (Employee)obj;
+if(name.equals(emp.getName()))
+{​​​​​
+return true;
+}​​​​​
+return false;
+}​​​​​
+
+
+}​​​​​
+
+
+
+​[3:15 PM] Degaonkar, Sanjay
+    
+import java.util.Comparator;
+
+public class SortByName implements Comparator<Employee> {​​​​​
+ @Override
+public int compare(Employee e1, Employee e2) {​​​​​
+return e1.getName().compareTo(e2.getName());
+}​​​​​
+}​​​​​
+​[3:15 PM] Degaonkar, Sanjay
+    
+import java.util.Collections;
+import java.util.LinkedList;
+
+public class Test {​​​​​
+ public static void main(String[] args) {​​​​​
+LinkedList<Employee> l=new LinkedList<>();
+l.add(new Employee("101","Sachin"));
+l.add(new Employee("102","Richard"));
+Collections.sort(l);
+System.out.println("Sort by emp number");
+System.out.println(l);
+System.out.println("sort by name");
+Collections.sort(l, new SortByName());
+System.out.println(l);
+//System.out.println("b".compareTo("b"));
+ }​​​​​
+}​​​​​
+
+
+
+
+​[3:15 PM] Degaonkar, Sanjay
+    
+import java.util.HashSet;
+
+public class Unique {​​​​​
+ public static void main(String[] args) {​​​​​
+HashSet h=new HashSet();
+h.add(new Employee("101","AB"));
+h.add(new Employee("101","BA"));
+System.out.println(h);
+ }​​​​​
+}​​​​​
+
+
+
+
+
+
+
+1 - Mansi 
+2 - Priti 
+3 - Aishwarya
+4 - Priya D.
+5 - Kanchan
+6 - Kajal T.
+7 - Isha 
+8 - Aisiri
+9 - 
+10 - Aastha A.
+11 - Uma
+12 - Pragya 
+13 - Kajal S. 
+14 - Ayushi 
+15 - Ayushi , Sumbul
+16 - 
+17 - Sumbul
+18 - Manoj
+19 -  
+
+
+Account
+int accountNumber
+int amount;
+
+
+InvalidAccountNumberException
+InsufficientBalanceException
+
+ICICIBank -------------business logic
+
+Client------------------UI
+
+
+Package bean 
+Account
+
+Package exceptions
+All exceptions
+
+Package Service 
+ICICIBank
+Interface 
+
+Package UI
+Client
+
+
+
+1) add interface
+(on client side ref of interface and object of implemented class)
+2) deposit amount
+fundtransfer
+
+3) min rs 500 amount is required to create account else raise the exception InsufficientOpeningAmountException
+
+in service layer, don't use any S.o.p statement
+just have return type for all the methods(void return type is not allowed)
+
+fund transfer - want to return balance of both accounts
+
+3000 3000
+101 102
+2000 to 102
+
+successful Bal from 101 = 1000
+Bal from 102 = 5000
+
+
+
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class MapExample {
+
+ public static void main(String[] args) {
+Map<Integer, String> m=new HashMap<>();
+m.put(1,"Collection");
+m.put(2,"Multithreading");
+m.put(3,"Java 8");
+System.out.println(m);
+System.out.println("using keyset");
+Set s = m.keySet(); //getting all keys
+Iterator it = s.iterator();
+while(it.hasNext())
+{
+Integer key = (Integer)it.next();
+System.out.println("Key = "+key);
+System.out.println("Value = "+m.get(key));
+}
+System.out.println("using entrySet");
+Set s2 = m.entrySet();
+Iterator it2=s2.iterator();
+while(it2.hasNext())
+{
+Map.Entry me =(Map.Entry)it2.next();
+System.out.println(me.getKey());
+System.out.println(me.getValue());
+System.out.println();
+}
+
+ }
+
+}
+
+
+[2:54 PM] Ayushi Sharma (Guest)
+    import java.util.*;
+ class KeyMaster1
+     {​​​​​​​
+         public int i;
+         public KeyMaster1(int i)
+         {​​​​​​​
+             System.out.println("Constructor Called");
+             this.i = i;
+         }​​​​​​​
+         public boolean equals(Object o)
+         {​​​​​​​
+             System.out.println("equals called");
+             return i == ((KeyMaster1)o).i;
+         }​​​​​​​
+         public int hashCode()
+         {​​​​​​​
+             System.out.println("hash called");
+             return i; }​​​​​​​
+ }​​​​​​​
+ public class MapIt1 {​​​​​​​
+     public static void main(String[] args)
+     {​​​​​​​
+         Set<KeyMaster1> set = new HashSet<KeyMaster1>(); //Created a new set of keymaster type
+         KeyMaster1 k1 = new KeyMaster1(1);   //creating 2 objects
+         KeyMaster1 k2 = new KeyMaster1(2);   //of key master class
+        
+         set.add(k1);
+         System.out.print(set.size()+" "); // size is 1
+        
+         set.add(k1);  //hash get called it does not gets add  as its same as k1
+         System.out.print(set.size()+" ");  //again size is 1
+        
+         set.add(k2); //hash called and k2 added to set
+         System.out.print(set.size()+" "); //now size is 2
+        
+         set.add(k2); // again hash called and k2 is not added
+         System.out.print(set.size()+" "); //so again size is 2
+        
+         System.out.println("\n  \n ");
+        
+         System.out.println(set.size()+":");  //size is 2
+       
+         System.out.println(k2.i);
+        
+         System.out.println("hashcode of k2:"+k2.hashCode());
+//         for(KeyMaster1 k:set) {​​​​​​​
+//             System.out.println(k.i+"$"+k.hashCode());
+//         }​​​​​​​
+        
+         k2.i = 1;
+         System.out.println("\nNew hashcode of k2:"+k2.hashCode());
+        
+//         for(KeyMaster1 k:set) {​​​​​​​
+//             System.out.println(k.i+"$"+k.hashCode());
+//         }​​​​​​​
+        
+         System.out.println(set);
+//         System.out.println(k1.i);
+//         System.out.println(k2.i);
+        
+        
+         System.out.print(set.size()+":"); //size is 2
+         set.remove(k1);  //hash is  called and k1 is removed
+        
+         System.out.println(set);
+       
+         System.out.print(set.size()+":");
+        
+         boolean b =set.remove(k2);
+         System.out.println(b);
+         // returns false if that value does not exist
+         // as in line 43 value of k2 is changed but the value in
+         //hash bucket/table is unchanged,now it will search element
+         //to remove according to new hash value and it wont find that object
+         //Since it didn't find that value it returned false and hence
+         //not able to remove it
+         //In simpler words here 2 hash calls
+         //on same object is inconsistent
+        
+        
+         System.out.println(set);
+         System.out.print(set.size());
+     }​​​​​​​
+ }​​​​​​​
+
+
+
+
+
+
+[11:03 AM] Degaonkar, Sanjay
+    
+Thread - separate path of execution
+
+when the thread is completed?
+either
+job is completed
+or
+unhandled exception
+
+who calls run method?
+threadschedular
+
+start() - pass the request in thread pool
+if you use run() instead of start()
+it considers normal method calling
+it doesn't consider thread
+
+how to create your own thread
+by extending Thread class or
+by implements Runnable interface
+
+Thread childThread = new Thread(runnable target,"childthreadname");
+Thread childThread = new Thread(runnable target);
+
+synchronized - to apply lock
+1) method
+2) lock
+
+2) Second project enhancement
+
+concurrent execution of withdrawAmount method
+
+synchronized with method :
+Methods are never locked
+in our project method is belonging to ICICIBank class
+ICICIBank object
+
+per object how many locks are there?
+only one
+
+per lock how many keys are there?
+only one
+
+we may have multiple synchronized methods
+=> to call any synchronized method we require key
+Test{​​​​​
+synchronized m1
+
+synchronized m2
+m3
+static synchronized m4--------------------------Test.class--------lock(class)
+static synchronized m5
+}​​​​​
+Test obj = new Test();--------------------------------obj------lock(obj)
+ two threads t1 t2
+t1 want to access m1
+t2 want to access m2
+is concurrent execution possible?
+No
+-----------------------------------------
+t1 want to access m1
+t2 want to access m3
+is concurrent execution possible?
+Yes
+key is not required to call m3 method
+-----------------------------------------
+t1 want to access m1
+t2 want to access m4
+is concurrent execution possible?
+Yes
+-----------------------------------------
+t1 want to access m4
+t2 want to access m5
+is concurrent execution possible?
+No
+
+Second Project enhancement - add multithreading
+add synchronized
+add sonarqube - optional
+try to share at least one suggesstion given by sonarqube tool
+tools - to get suggesstion in project
+sonarqube
+1) add sonarqube plugin in STS
+ help - eclipse marketplace - type "sonarqube"
+add sonarlint plugin
+
+wait - releases the lock, put that thread object in a wait pool
+notify -
+ producer and consumer
+
+ Thread t=new Thread(r);
+t.start();
+t.start(); IllegalThreadStateException
+ lock - synchronized
+ if without lock if you try to call wait method?
+IllegalMonitorStateException
+
+Threadpool/Runnable pool
+String constant pool
+Integer pool
+Connection pool
+ for every object there is separate wait pool
+
+ 
+
+
+
+
+[12:50 PM] Degaonkar, Sanjay
+    
+class MyThread extends Thread
+{​​​​​
+public void run() //threadschedular/JVM calls the run method
+{​​​​​
+for(int i=1;i<=5;i++)
+{​​​​​
+System.out.println(i +getName());
+throw new NullPointerException();
+}​​​​​
+}​​​​​
+}​​​​​
+public class MultithreadingDemo {​​​​​
+
+ public static void main(String[] args) {​​​​​
+System.out.println("parent thread");
+MyThread m=new MyThread();
+m.start();// there are 2 threads
+for(int i=10;i<=20;i++)
+{​​​​​
+System.out.println(i);
+}​​​​​
+}​​​​​
+}​​​​​
+
+
+
+
+package com.capgemini;
+class MyThread implements Runnable
+{​​​​​
+public void run() //threadschedular/JVM calls the run method
+{​​​​​
+for(int i=1;i<=5;i++)
+{​​​​​
+System.out.println(i);
+throw new NullPointerException();
+}​​​​​
+}​​​​​
+}​​​​​
+public class MultithreadingDemo {​​​​​
+
+ public static void main(String[] args) {​​​​​
+System.out.println("parent thread");
+MyThread m=new MyThread();
+Thread childThread = new Thread(m,"myownthreadname");
+childThread.start();
+for(int i=10;i<=20;i++)
+{​​​​​
+System.out.println(i);
+}​​​​​
+}​​​​​
+}​​​​​
+
+
+
+
+public class MultiThreadingWithLambda {
+
+ 
+
+    public static void main(String[] args) {
+        Runnable r1 = new Runnable() {
+             @Override
+             public void run() { // anonymous class
+                System.out.println("Runnable with Anonymous Class");
+             }
+          };
+          Runnable r2 = () -> {   // lambda expression
+             System.out.println("Runnable with Lambda Expression");
+          };
+          new Thread(r1).start();
+          new Thread(r2).start();
+    }}
+
+
+
+[10:33 AM] Degaonkar, Sanjay
+    
+interface Maths
+{​​​​​
+public int operation(int a,int b);
+}​​​​​
+public class LambdaDemo {​​​​​
+
+ public static void main(String[] args) {​​​​​
+Maths m1=new Maths() {​​​​​
+ @Override
+public int operation(int a, int b) {​​​​​
+// TODO Auto-generated method stub
+return a+b;
+}​​​​​
+}​​​​​;
+
+System.out.println(m1.operation(4,4));
+Maths m2 = (int a,int b) ->{​​​​​
+return a+b;
+}​​​​​;
+
+System.out.println(m2.operation(5, 5));
+Maths m3 =(x,y) -> x+y; // parameter type return {​​​​​ }​​​​​
+System.out.println(m3.operation(6, 6));
+
+
+ }​​​​​
+}​​​​​
+
+
+
+Predicate<Integer> less = i -> (i < 18);
+        System.out.println(less.test(10));
+        
+        Consumer<Integer> print = j -> System.out.println(j);
+        print.accept(30);
+
+
+
+
+Which of the following is correct generic class declaration?
+
+class Testlab<?>
+
+class Testlab<Testlab, Testlab>
+
+class Testlab<T>
+class Testlab <>
+
+None of above.
+ 
+
+
+Anonymous class
+Lambda expression 
+Functional interfaces 
+Stream
+Date and time api 
+Java 8 basics
+Map n filter method
+
+
+
+[10:02 AM] Degaonkar, Sanjay
+    
+1) Load the driver
+2) Establish connection
+3) Prepare either
+Statement or
+PreparedStatement or
+CallableStatement
+4) Excute the query
+boolean execute - all types of queries
+int executeUpdate - DML query
+ResultSet executeQuery - select
+5) Close the connection
+​[10:02 AM] Degaonkar, Sanjay
+    
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JDBCConnectivity {​​​​​
+ public static void main(String[] args) throws ClassNotFoundException, SQLException {​​​​​
+// load the driver
+Class.forName("com.mysql.jdbc.Driver");
+
+Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","password");
+
+Statement st = conn.createStatement();
+ResultSet rs =st.executeQuery("select * from employee");
+while(rs.next())
+{​​​​​
+System.out.println(rs.getInt("empno"));
+System.out.println(rs.getString("name"));
+}​​​​​
+conn.close();
+ }​​​​​
+}​​​​​
+
+
+List<String>
+result = new ArrayList
+List<Person>
+persons = ...
+persons.stream
+.
+peek System. out println
+.
+filter person --> person.getAge () >
+.
+peek result add
+
+
+IntStream ints =IntStream.of(3,2,1,5,3,4,5);
+System.out.print(ints.filter(e ->e>3).distinct().average().getAsDouble());
+
+
+IntStream
+.range(1, 10)
+.forEach(System.out::print);
+System.out.println();
+
+peek
+filter
+forEach
+map
+sorted
+findFirst
+distinct
+average
+getAsDouble
+range
+skip
+sum
+ifPresent
+
+
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'yourpassword';
+
+
+
+
+
+
+
+
+
+
+
+
+
